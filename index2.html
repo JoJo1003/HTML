@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹디자인기능사 레이아웃 D-1</title>
+    <title>웹디자인기능사 레이아웃 E-2</title>
     <style>
         * {
             margin: 0;
@@ -11,50 +11,47 @@
         }
         #wrap {
             width: 100%;
-            display: flex;
-            flex-wrap: wrap;
         }
-        #aside {
+        #main {
+            width: 100%;
+            display: flex;
+        }
+        #header {
             width: 200px;
         }
-        #aside .logo {
+        #header .logo {
             width: 100%;
             height: 100px;
             background-color: #efefef;
         }
-        #aside .nav {
-            height: 550px;
+        #header .nav {
+            width: 100%;
+            height: 650px;
             background-color: #e3e3e3;
         }
-        #main {
-            width: calc(100% - 200px);
+        #contents {
+            width: 400px;
+            height: 750px;
+            background-color: #e3e3e3;
         }
-        #slider {
+        #contents .notice {
             width: 100%;
-            display: flex;
-        }
-        #slider .image {
-            width: calc(100% - 230px);
-            height: 400px;
+            height: 300px;
             background-color: #d9d9d9;
         }
-        #slider .banner {
-            width: 230px;
-            height: 400px;
+        #contents .gallery {
+            width: 100%;
+            height: 300px;
             background-color: #d1d1d1;
         }
-        #contents {
+        #contents .link {
             width: 100%;
-            display: flex;
-        }
-        #contents .content1 {
-            width: 50%;
-            height: 250px;
+            height: 150px;
             background-color: #c7c7c7;
         }
-        #contents .content2 {
-            width: 50%;
-            height: 250px;
+        #slider {
+            width: calc(100% - 600px);
+            height: 750px;
             background-color: #bcbcbc;
         }
         #footer {
@@ -77,36 +74,42 @@
             background-color: #9d9d9d;
         }
     </style>
-
 </head>
 <body>
     <div id="wrap">
-        <aside id="aside">
-            <h1 class="logo"></h1>
-            <nav class="nav"></nav>
-        </aside>
-        <!-- //aside -->
         <main id="main">
-            <article id="slider">
-                <div class="image"></div>
-                <div class="banner"></div>
-            </article>
-            <!-- //article -->
+            <header id="header">
+                <h1 class="logo"></h1>
+                <nav class="nav"></nav>
+            </header>
+
+            <!-- //header -->
 
             <section id="contents">
-                <div class="content1"></div>
-                <div class="content2"></div>
+                <article class="notice"></article>
+                <article class="gallery"></article>
+                <article class="link"></article>
             </section>
+
             <!-- //contents -->
+
+            <article id="slider">
+            </article>
+
+            <!-- //slider -->
         </main>
+
         <!-- //main -->
+
         <footer id="footer">
             <div class="footer1"></div>
             <div class="footer2"></div>
             <div class="footer3"></div>
         </footer>
+
         <!-- //footer -->
     </div>
+    
     <!-- //wrap -->
 </body>
 </html>
